@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Discount.Grpc.Entities;
 using System.Threading.Tasks;
-using Discount.Grpc.Entities;
 
 namespace Discount.Grpc.Repositories
 {
     public interface IDiscountRepository
     {
         Task<Coupon> GetDiscount(string productName);
-        Task<bool> CreateDiscount(Coupon discountCoupon);
-        Task<bool> UpdateDiscount(Coupon discountCoupon);
+
+        Task<bool> CreateDiscount(Coupon coupon);
+        Task<bool> UpdateDiscount(Coupon coupon);
         Task<bool> DeleteDiscount(string productName);
     }
 }
